@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
 
@@ -48,7 +48,9 @@ def quotable():
 def quotes_repository():
     return render_template("inspirations.html", quotes=quotes)
 
-
+@app.route("/api/quotes")
+def list_quotes():
+    return jsonify(quotes)
 
 
 if __name__=='__main__':

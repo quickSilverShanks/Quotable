@@ -31,36 +31,43 @@
       
       <img class="img-fluid rounded" id="banner" src="./static/quotes_banner.jpg">
   
-      <h2 class="text-center mt-4 mb-4">Dive into our archive of quotes and discover hidden gems!</h2>
+      <h2 style="color:rgb(164,55,219);" class="text-center mt-4 mb-4">Dive into our archive of quotes and discover hidden gems!</h2>
   
-      <div class="mb-6">
+      <div class="mb-4">
         
         {% for quote in quotes %}
-          <div>
-            <blockquote class="blockquote">
-              <p>"{{quote['quote']}} -- {{quote['character']}}</p>
-            </blockquote>
-            <p>Source : {{quote['source']}} [{{quote['quote_cat']}}]</p>
-            <hr>
-          </div>
+          {% include "queryitem.html" %}
         {% endfor %}
-        
-      </div>
       
-      <p>
-        Join us in spreading inspiration with your favorite quote!
-        <button class="btn btn-primary btn-sm">Contribute</button>
-      </p>
+      </div>
 
-      <hr>
+      <br><br>
 
-      <p>
-        Help us improve! Share your feedback and suggestions with us by clicking the button below.
+      <div class="border-bottom row">
+
+        <div class="col-6">
+          <p>
+            Back to where it all began!
+          <button class="btn btn-primary btn-sm" onclick = "window.location.href='/';">HomePage</button>
+          </p>
+        </div>
+
+        <div class="col-6">
+          <p>
+            Join us in spreading inspiration with your favorite quote!
+            <button class="btn btn-primary btn-sm">Contribute</button>
+          </p>
+        </div>
+
+      </div>
+
+      <p class="mt-3">
+        Help us improve! Share your feedback and suggestions with us by clicking the button here.
       <button class="btn btn-secondary btn-sm">Share your Feedback</button>
       </p>
 
       <div class="text-center my-4">
-        Words always inspire. Always! - Quotable
+        Words always inspire. Always! - <font color=#A437DB>Quotable</font>
       </div>
 
     </div>
