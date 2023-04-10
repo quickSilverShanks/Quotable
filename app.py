@@ -5,38 +5,38 @@ app = Flask(__name__)
 quotes = [
   {
     'id': 1,
-    'quote_cat': "Book",
+    'q_category': "Book",
     'quote': "Who in the world am I? Ah, that's the great puzzle.",
-    'character': "Lewis Carroll",
-    'source': "Alice in Wonderland"
+    'q_speaker': "Lewis Carroll",
+    'q_source': "Alice in Wonderland"
   },
   {
     'id': 2,
-    'quote_cat': "Book",
+    'q_category': "Book",
     'quote': "Only a few find the way, some don’t recognize it when they do – some… don’t ever want to.",
-    'character': "Cheshire Cat",
-    'source': "Alice in Wonderland"
+    'q_speaker': "Cheshire Cat",
+    'q_source': "Alice in Wonderland"
   },
   {
     'id': 3,
-    'quote_cat': "Movie",
+    'q_category': "Movie",
     'quote': "Behind this mask there is more than just flesh. Beneath this mask there is an idea... and ideas are bulletproof.",
-    'character': "V",
-    'source': "V for Vendetta"
+    'q_speaker': "V",
+    'q_source': "V for Vendetta"
   },
   {
     'id': 4,
-    'quote_cat': "Movie",
+    'q_category': "Movie",
     'quote': "Equality and freedom are not luxuries to lightly cast aside. Without them, order cannot long endure before approaching depths beyond imagining.",
-    'character': "V",
-    'source': "V for Vendetta"
+    'q_speaker': "V",
+    'q_source': "V for Vendetta"
   },
   {
     'id': 5,
-    'quote_cat': "Book",
+    'q_category': "Book",
     'quote': "Even the smallest person can change the course of the future.",
-    'character': "Galadriel",
-    'source': "Lord of the Rings"
+    'q_speaker': "Galadriel",
+    'q_source': "Lord of the Rings"
   }
 ]
 

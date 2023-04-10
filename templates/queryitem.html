@@ -1,6 +1,10 @@
 <div class="border-bottom">
   <blockquote class="blockquote">
-    <p>"{{quote['quote']}}" -- {{quote['character']}}</p>
+    {% if 'q_speaker' in quote %}
+      <p>"{{quote['quote']}}"</p>
+    {% else %}
+      <p>"{{quote['quote']}}" -- {{quote['q_speaker']}}</p>
+    {% endif %}
   </blockquote>
-  <p>Source : {{quote['source']}} [{{quote['quote_cat']}}]</p>
+  <p>Source : {{quote['q_source']}} [{{quote['q_category']}}]</p>
 </div>
