@@ -12,12 +12,15 @@ engine = create_engine(
   })
 
 
+
 def load_quotes_from_db():
   with engine.connect() as conn:
     result = conn.execute(text("select * from quotes"))
     quotes = []
     for row in result.all():
-      jobs.append(dict(row))
+      # dict(row) no longer works in new version of sqlalchemy
+      # quotes.append(dict(row))
+      quotes.append(row._mapping)
     return quotes
 
 def load_quote_from_db(id):

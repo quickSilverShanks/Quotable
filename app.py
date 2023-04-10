@@ -26,6 +26,7 @@ def show_quote_json(id):
   quote = load_quote_from_db(id)
   return jsonify(quote)
 
+
 @app.route("/contribute.html")
 def contrib():
     return render_template("contribute.html")
@@ -37,6 +38,8 @@ def add_to_quote_repo():
   add_quote_to_db(data)
   return render_template('quote_submitted.html', 
                          application=data)
+
+
 
 
 if __name__=='__main__':
