@@ -1,8 +1,7 @@
 from sqlalchemy import create_engine, text
-# import os
+import os
 
-# db_connection_string = os.environ['DB_CONNECTION_STRING_NEW']
-db_connection_string = "mysql+pymysql://tmw9ywwhd4t5vj5t83mv:pscale_pw_gvfp7OzoUCkM1MdZTKZ682ioUCsmTUOhoKTXpD7DvsT@aws.connect.psdb.cloud/quotable?charset=utf8mb4"
+db_connection_string = os.environ['DBCONNECTSTRING']
 
 engine = create_engine(
   db_connection_string, 
