@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, request
 from database import load_quotes_from_db, load_quote_from_db, add_quote_to_db
 
 app = Flask(__name__)
@@ -36,8 +36,7 @@ def contrib():
 def add_to_quote_repo():
   data = request.form
   add_quote_to_db(data)
-  return render_template('quote_submitted.html', 
-                         application=data)
+  return render_template('quote_submitted.html')
 
 
 

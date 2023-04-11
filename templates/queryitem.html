@@ -1,6 +1,6 @@
 <div class="border-bottom">
   <blockquote class="blockquote">
-    {% if 'q_speaker' in quote %}
+    {% if 'q_speaker' not in quote %}
       <p>"{{quote['quote']}}"</p>
     {% else %}
       <p>"{{quote['quote']}}" -- {{quote['q_speaker']}}</p>

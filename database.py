@@ -38,10 +38,14 @@ def load_quote_from_db(id):
 
 def add_quote_to_db(data):
   with engine.connect() as conn:
-    query = text("INSERT INTO quotes (q_category, quote, q_speaker, q_source) VALUES (:q_category, :quote, :q_speaker, :q_source)")
+    # query = text("INSERT INTO quotes (q_category, quote, q_speaker, q_source) VALUES (:q_category, :quote, :q_speaker, :q_source)")
 
-    conn.execute(query, 
-                 q_category=data['q_category'],
-                 quote=data['quote'],
-                 q_speaker=data['q_speaker'],
-                 q_source=data['q_source'])
+    # conn.execute(query, 
+    #              q_category=data['q_category'],
+    #              quote=data['quote'],
+    #              q_speaker=data['q_speaker'],
+    #              q_source=data['q_source'])
+
+    query = "INSERT INTO quotes (q_category, quote, q_speaker, q_source) VALUES (\"" + data['q_category'] + "\", \"" + data['quote'] + "\", \"" + data['q_speaker'] + "\", \"" + data['q_source'] + "\")"
+
+    conn.execute(text(query))
